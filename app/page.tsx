@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import MouseTracker from "@/components/MouseTracker";
 import CursorGlow from "@/components/CursorGlow";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import SkillsArsenal from "@/components/SkillsArsenal";
 
 export default function Home() {
   const rotatingGroupRef = useRef<SVGGElement | null>(null);
@@ -161,7 +162,7 @@ export default function Home() {
               </span>
             </p>
             <p>
-              with <span className="text-[#703bf7]">3+ years</span> building{" "}
+              with <span className="text-[#703bf7]">4+ years</span> building{" "}
               <span className="text-[#703bf7]">responsive</span>,{" "}
               <span className="text-[#703bf7]">user-centered</span> interfaces
             </p>
@@ -231,7 +232,7 @@ export default function Home() {
 
           <div className="flex items-center gap-56 font-light">
             <div className="space-y-1">
-              <p className="text-[#703bf7] text-4xl">3+</p>
+              <p className="text-[#703bf7] text-4xl">4+</p>
               <p className="text-[12px] text-[#888]">Years Active</p>
               <p className="text-[10px] text-[#636262]">in field</p>
             </div>
@@ -305,6 +306,8 @@ export default function Home() {
       </div>
 
       <ProjectShowcase />
+
+      <SkillsArsenal />
     </>
   );
 }
