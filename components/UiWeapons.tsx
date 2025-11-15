@@ -44,6 +44,16 @@ const skillsData = [
     mission_active_num: "2",
   },
   {
+    skill: "BootStrap",
+    level: "ADVANCED",
+    readiness: "Combat Effectiveness",
+    percentage: "85%",
+    year: "1y",
+    category: "Styling",
+    status: "COMBAT READY",
+    mission_active_num: "1",
+  },
+  {
     skill: "GSAP",
     level: "PROFICIENT",
     readiness: "Combat Effectiveness",
@@ -64,7 +74,7 @@ export default function UiWeapons() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#703bf7"
+          stroke="var(--primary-color)" 
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

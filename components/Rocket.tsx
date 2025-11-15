@@ -6,11 +6,11 @@ export default function Rocket() {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width="17"
+      height="17"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#13033d"
+      stroke="var(--primary-color-dark)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -29,14 +29,14 @@ export default function Rocket() {
 
       <motion.path
         d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
-        fill="#703bf7"
+        fill="var(--primary-color)"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.6, 1, 0.6],
           filter: [
-            "drop-shadow(0 0 3px #703bf7)",
-            "drop-shadow(0 0 8px #9d6bff)",
-            "drop-shadow(0 0 3px #703bf7)",
+            "drop-shadow(0 0 3px var(--primary-color))",
+            "drop-shadow(0 0 8px #9d6bff)", 
+            "drop-shadow(0 0 3px var(--primary-color))",
           ],
         }}
         transition={{

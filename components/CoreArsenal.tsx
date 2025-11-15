@@ -74,7 +74,7 @@ export default function CoreArsenal() {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#703bf7"
+        stroke="var(--primary-color)" 
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

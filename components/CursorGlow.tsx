@@ -1,20 +1,42 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
+  const [primaryColorRGB, setPrimaryColorRGB] = useState<string>("112, 59, 247"); // default
+
+  // ✅ Watch --primary-color-rgb dynamically
+  useEffect(() => {
+    const updateColor = () => {
+      const rootStyles = getComputedStyle(document.documentElement);
+      const rgb = rootStyles.getPropertyValue("--primary-color-rgb").trim();
+      if (rgb) setPrimaryColorRGB(rgb);
+    };
+
+    updateColor(); // run once immediately
+
+    // Observe changes to <html> style
+    const observer = new MutationObserver(updateColor);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["style"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const glowEl = glowRef.current;
     if (!glowEl) return;
 
+    const size = 200;
+
     const handleMove = (e: MouseEvent) => {
-      const size = 200;
       const x = e.clientX;
       const y = e.clientY;
 
-      glowEl.style.background = `radial-gradient(circle ${size}px at ${x}px ${y}px, rgba(112,59,247,0.25) 0%, rgba(112,59,247,0) 20%)`;
+      glowEl.style.background = `radial-gradient(circle ${size}px at ${x}px ${y}px, rgba(${primaryColorRGB}, 0.25) 0%, rgba(${primaryColorRGB}, 0) 20%)`;
     };
 
     const handleLeave = () => {
@@ -28,7 +50,7 @@ export default function CursorGlow() {
       window.removeEventListener("mousemove", handleMove);
       window.removeEventListener("mouseout", handleLeave);
     };
-  }, []);
+  }, [primaryColorRGB]); // ✅ react to changes
 
   return (
     <div

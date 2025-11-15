@@ -82,45 +82,46 @@ export default function SkillsArsenal() {
 
   return (
     <div className="flex flex-col items-center pt-5 font-sans mb-40">
-      <div className="flex font-mono items-center gap-2 px-4 py-2 text-[#703bf7] rounded-full text-[8px] bg-[#703bf7]/5 backdrop-blur-xs tracking-wider border border-[#703bf7]/50">
-        <div className="w-1.5 h-1.5 rounded-full bg-[#703bf7] animate-pulse"></div>
+      <div className="flex font-mono items-center gap-2 px-4 py-2 text-(--primary-color) rounded-full text-[9px] bg-(--primary-color)/5 backdrop-blur-xs tracking-wider border border-(--primary-color)/50">
+        <div className="w-1.5 h-1.5 rounded-full bg-(--primary-color) animate-pulse"></div>
         <p>ALL SKILLS</p>
       </div>
 
-      <p className="text-5xl tracking-wide my-5 font-extralight">
-        SKILLS <span className="text-[#703bf7] font-normal">ARSENAL</span>
+      <p className="text-6xl tracking-wide my-5 font-extralight">
+        SKILLS{" "}
+        <span className="text-(--primary-color) font-normal">ARSENAL</span>
       </p>
 
-      <div className="text-[#888] w-[430px] text-sm text-center leading-[25px] tracking-wide">
+      <div className="text-[#888] w-[450px] text-[15px] text-center leading-[25px] tracking-wide">
         <p>
           Powerful weaponry acquired through{" "}
-          <span className="text-[#703bf7]">4+ years</span> of{" "}
-          <span className="text-[#703bf7]">battlefield experience</span>. Each
-          skill represents proven{" "}
-          <span className="text-[#703bf7]">combat effectiveness</span> in
-          production environments.
+          <span className="text-(--primary-color)">3+ years</span> of{" "}
+          <span className="text-(--primary-color)">battlefield experience</span>
+          . Each skill represents proven{" "}
+          <span className="text-(--primary-color)">combat effectiveness</span>{" "}
+          in production environments.
         </p>
       </div>
 
-      <div className="flex gap-10 tracking-wide">
+      <div className="flex gap-16 tracking-wide">
         <div className="space-y-1 text-center my-5">
-          <p className="text-[#703bf7] text-xl">10+</p>
+          <p className="text-(--primary-color) text-xl">13+</p>
           <p className="text-[9px] text-[#888]">ACTIVE SKILLS</p>
         </div>
 
         <div className="space-y-1 text-center my-5">
-          <p className="text-[#703bf7] text-xl">2</p>
+          <p className="text-(--primary-color) text-xl">3</p>
           <p className="text-[9px] text-[#888]">TECH DOMAINS</p>
         </div>
 
         <div className="space-y-1 text-center my-5">
-          <p className="text-[#703bf7] text-xl">88%+</p>
+          <p className="text-(--primary-color) text-xl">81%+</p>
           <p className="text-[9px] text-[#888]">SUCCESS RATE</p>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex items-center gap-6 mt-10 bg-[#0f0f0f]/30 tracking-wide border border-[#703bf7]/40 px-2 py-2 rounded-xl">
+      <div className="flex items-center gap-6 mt-10 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-2 py-2 rounded-xl">
         {tabs.map((tab) => {
           const isActive = tab.id === activeTab;
           return (
@@ -129,28 +130,28 @@ export default function SkillsArsenal() {
               onClick={() => setActiveTab(tab.id)}
               className={`relative flex flex-col items-center px-16 py-1.5 rounded-lg tracking-wider cursor-none ${
                 isActive
-                  ? "bg-[#703bf7]/20 border border-[#703bf7] text-[#703bf7]"
-                  : "hover:bg-[#703bf7]/5 hover:border hover:border-[#703bf7]/30 text-[#656565]"
+                  ? "bg-(--primary-color)/20 border border-(--primary-color) text-(--primary-color)"
+                  : "hover:bg-(--primary-color)/5 hover:border hover:border-(--primary-color)/30 text-[#656565]"
               }`}
             >
               <div
-                className={`w-2 h-2 bg-[#703bf7] rounded-full absolute right-1 top-1 animate-pulse ${
+                className={`w-2 h-2 bg-(--primary-color) rounded-full absolute right-1 top-1 animate-pulse ${
                   isActive ? "" : "hidden"
                 }`}
               ></div>
               {React.cloneElement(tab.icon, {
-                stroke: isActive ? "#703bf7" : "#656565",
+                stroke: isActive ? "var(--primary-color)" : "#656565",
               })}
               <p
                 className={`font-mono mt-3 text-[11px] ${
-                  isActive ? "text-[#703bf7]" : "text-[#656565]"
+                  isActive ? "text-(--primary-color)" : "text-[#656565]"
                 }`}
               >
                 {tab.label}
               </p>
               <p
                 className={`text-sm ${
-                  isActive ? "text-[#703bf7]" : "text-[#959595]"
+                  isActive ? "text-(--primary-color)" : "text-[#959595]"
                 }`}
               >
                 {tab.description}
@@ -160,7 +161,7 @@ export default function SkillsArsenal() {
         })}
       </div>
 
-      {/* Active tab component */}
+      {/* Active tab */}
       <div className="mt-12 w-[93%]">
         <AnimatePresence mode="wait">
           {tabs
@@ -177,6 +178,103 @@ export default function SkillsArsenal() {
               </motion.div>
             ))}
         </AnimatePresence>
+      </div>
+
+      <div className="mt-[76px] flex gap-6 w-[93%]">
+        <div className="bg-[#0f0f0f]/30 flex flex-col items-center tracking-wider font-light border border-(--primary-color)/40 rounded-xl w-full p-12 hover:-translate-y-2 transition-transform duration-600 ease-in-out">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-zap w-9 h-9 transition-all duration-300 mb-2"
+            aria-hidden="true"
+          >
+            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+          </svg>
+          <p className="text-4xl text-(--primary-color) my-2">13+</p>
+          <p className="text-[#959595] text-sm">Active Weapons</p>
+          <p className="text-[#656565] text-xs">in arsenal</p>
+        </div>
+
+        <div className="bg-[#0f0f0f]/30 flex flex-col items-center tracking-wider font-light border border-(--primary-color)/40 rounded-xl w-full p-12 hover:-translate-y-2 transition-transform duration-600 ease-in-out">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-target w-9 h-9 transition-all duration-300 mb-2"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+          <p className="text-4xl text-(--primary-color) my-2">81%+</p>
+          <p className="text-[#959595] text-sm">Avg Accuracy</p>
+          <p className="text-[#656565] text-xs">success rate</p>
+        </div>
+
+        <div className="bg-[#0f0f0f]/30 flex flex-col items-center tracking-wider font-light border border-(--primary-color)/40 rounded-xl w-full p-12 hover:-translate-y-2 transition-transform duration-600 ease-in-out">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-brain w-9 h-9 transition-all duration-300 mb-2"
+            aria-hidden="true"
+          >
+            <path d="M12 18V5"></path>
+            <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"></path>
+            <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"></path>
+            <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"></path>
+            <path d="M18 18a4 4 0 0 0 2-7.464"></path>
+            <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"></path>
+            <path d="M6 18a4 4 0 0 1-2-7.464"></path>
+            <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"></path>
+          </svg>
+          <p className="text-4xl text-(--primary-color) my-2">3+</p>
+          <p className="text-[#959595] text-sm">Years Combat</p>
+          <p className="text-[#656565] text-xs">experience</p>
+        </div>
+
+        <div className="bg-[#0f0f0f]/30 flex flex-col items-center tracking-wider font-light border border-(--primary-color)/40 rounded-xl w-full p-12 hover:-translate-y-2 transition-transform duration-600 ease-in-out">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-globe w-9 h-9 transition-all duration-300 mb-2"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <p className="text-4xl text-(--primary-color) my-2">24/7</p>
+          <p className="text-[#959595] text-sm">Operational</p>
+          <p className="text-[#656565] text-xs">availability</p>
+        </div>
       </div>
     </div>
   );
