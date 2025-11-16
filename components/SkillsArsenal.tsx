@@ -6,7 +6,7 @@ import CoreArsenal from "./CoreArsenal";
 import UiWeapons from "./UiWeapons";
 import CloudOps from "./CloudOps";
 
-export default function SkillsArsenal() {
+export default function SkillsArsenal({ id }: { id?: string }) {
   const [activeTab, setActiveTab] = useState("core");
 
   const tabs = [
@@ -81,18 +81,18 @@ export default function SkillsArsenal() {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-5 font-sans mb-40">
+    <div id={id} className="flex flex-col items-center pt-5 font-sans mb-40">
       <div className="flex font-mono items-center gap-2 px-4 py-2 text-(--primary-color) rounded-full text-[9px] bg-(--primary-color)/5 backdrop-blur-xs tracking-wider border border-(--primary-color)/50">
         <div className="w-1.5 h-1.5 rounded-full bg-(--primary-color) animate-pulse"></div>
         <p>ALL SKILLS</p>
       </div>
 
-      <p className="text-6xl tracking-wide my-5 font-extralight">
+      <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
         SKILLS{" "}
         <span className="text-(--primary-color) font-normal">ARSENAL</span>
       </p>
 
-      <div className="text-[#888] w-[450px] text-[15px] text-center leading-[25px] tracking-wide">
+      <div className="text-[#888] w-[500px] font-mono text-[14px] text-center leading-[25px] tracking-wide">
         <p>
           Powerful weaponry acquired through{" "}
           <span className="text-(--primary-color)">3+ years</span> of{" "}
@@ -103,7 +103,7 @@ export default function SkillsArsenal() {
         </p>
       </div>
 
-      <div className="flex gap-16 tracking-wide">
+      <div className="flex gap-16 tracking-wide font-mono">
         <div className="space-y-1 text-center my-5">
           <p className="text-(--primary-color) text-xl">13+</p>
           <p className="text-[9px] text-[#888]">ACTIVE SKILLS</p>
@@ -121,7 +121,7 @@ export default function SkillsArsenal() {
       </div>
 
       {/* Tabs */}
-      <div className="flex items-center gap-6 mt-10 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-2 py-2 rounded-xl">
+      <div className="flex items-center gap-6 mt-10 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-2 py-2 rounded-xl font-mono">
         {tabs.map((tab) => {
           const isActive = tab.id === activeTab;
           return (
@@ -180,7 +180,7 @@ export default function SkillsArsenal() {
         </AnimatePresence>
       </div>
 
-      <div className="mt-[76px] flex gap-6 w-[93%]">
+      <div className="mt-[76px] flex gap-6 w-[93%] font-mono">
         <div className="bg-[#0f0f0f]/30 flex flex-col items-center tracking-wider font-light border border-(--primary-color)/40 rounded-xl w-full p-12 hover:-translate-y-2 transition-transform duration-600 ease-in-out">
           <svg
             xmlns="http://www.w3.org/2000/svg"

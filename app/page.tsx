@@ -6,8 +6,10 @@ import MouseTracker from "@/components/MouseTracker";
 import CursorGlow from "@/components/CursorGlow";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import SkillsArsenal from "@/components/SkillsArsenal";
-import HoverTextSwap from "@/components/HoverTextSwap";
 import OriginStory from "@/components/OriginStory";
+import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
+import AnimateOnView from "@/components/AnimateOnView";
 
 export default function Home() {
   const rotatingGroupRef = useRef<SVGGElement | null>(null);
@@ -29,7 +31,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative bg-lines overflow-hidden font-sans h-[1060px] mb-40">
+      <div
+        id="home"
+        className="relative bg-lines overflow-hidden font-sans h-[1060px] mb-40"
+      >
         <MouseTracker />
         <CursorGlow />
         <Header />
@@ -134,12 +139,12 @@ export default function Home() {
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4 -mt-14">
           <div className="flex gap-1 items-center mb-8">
             <div className="bg-(--primary-color) h-2 w-2 rounded-full animate-pulse"></div>
-            <p className="text-(--primary-color) text-[8px] tracking-wide">
+            <p className="text-(--primary-color) text-[8px] tracking-wide font-mono">
               TARGET LOCKEDIN
             </p>
           </div>
 
-          <div className="flex items-center gap-5 mb-[35px]">
+          <div className="flex items-center gap-5 mb-[35px] font-sans">
             <div className="w-16 h-0.5 bg-linear-to-r from-transparent to-(--primary-color)"></div>
             <p className="font-extralight text-5xl">
               SHOLANKE <span className="text-(--primary-color)">OLADIMEJI</span>
@@ -149,29 +154,33 @@ export default function Home() {
 
           <div className="flex items-center gap-3 mb-[35px]">
             <div className="w-16 h-0.5 bg-linear-to-r from-transparent to-(--primary-color)"></div>
-            <div className="px-4 py-2 text-(--primary-color) rounded-full text-xs bg-transparent backdrop-blur-xs tracking-wider border border-(--primary-color)/50">
+            <div className="px-4 py-2 text-(--primary-color) rounded-full text-[11px] bg-transparent backdrop-blur-xs tracking-wider border border-(--primary-color)/50 font-mono">
               CODENAME:SPARK
             </div>
             <div className="w-16 h-0.5 bg-linear-to-l from-transparent to-(--primary-color)"></div>
           </div>
 
-          <div className="font-light flex flex-col items-center gap-[3px] text-[#888] mb-[66px]">
+          <div className="font-light flex flex-col items-center gap-[3px] text-[#888] mb-[66px] font-mono text-sm tracking-wider">
             <p>
-              <span className="text-(--primary-color)">Frontend Developer </span>
+              <span className="text-(--primary-color)">
+                Frontend Developer{" "}
+              </span>
               crafting engaging,{" "}
               <span className="text-(--primary-color)">
                 high-performance web experiences
               </span>
             </p>
             <p>
-              with <span className="text-(--primary-color)">3+ years</span> building{" "}
+              with <span className="text-(--primary-color)">3+ years</span>{" "}
+              building{" "}
               <span className="text-(--primary-color)">responsive</span>,{" "}
-              <span className="text-(--primary-color)">user-centered</span> interfaces
+              <span className="text-(--primary-color)">user-centered</span>{" "}
+              interfaces
             </p>
           </div>
 
-          <div className="flex gap-6 tracking-wide mb-[50px]">
-            <button className="bg-(--primary-color) text-(--primary-color-dark) px-5 py-2.5 rounded-lg cursor-none flex items-center">
+          <div className="flex gap-6 tracking-wide mb-[50px] font-[Exan]">
+            <button className="bg-(--primary-color) text-(--primary-color-dark) px-5 py-2.5 rounded-lg cursor-none flex items-center arrow-hover glow-hover">
               <p>Download CV</p>
               <svg
                 width="20"
@@ -190,7 +199,7 @@ export default function Home() {
               </svg>
             </button>
 
-            <button className="bg-(--primary-color) text-(--primary-color-dark) px-5 py-2.5 rounded-lg flex items-center cursor-none">
+            <button className="bg-(--primary-color) text-(--primary-color-dark) px-5 py-2.5 rounded-lg flex items-center cursor-none arrow-hover">
               <p>Engage Target</p>
               <svg
                 width="20"
@@ -229,7 +238,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex items-center gap-56 font-light">
+          <div className="flex items-center gap-56 font-light font-mono">
             <div className="space-y-1">
               <p className="text-(--primary-color) text-4xl">3+</p>
               <p className="text-[12px] text-[#888]">Years Active</p>
@@ -251,17 +260,19 @@ export default function Home() {
         </div>
 
         <div className="text-[11px] absolute bottom-2 w-full flex flex-col justify-center items-center">
-          <p className="text-[#888] mb-2 tracking-wide">SCROLL TO EXPLORE</p>
+          <p className="text-[#888] mb-2 tracking-wide font-[Exan]">
+            SCROLL TO EXPLORE
+          </p>
           <div className="flex flex-col items-center gap-1">
             <svg
               width="16"
               height="16"
               viewBox="0 0 24 24"
               fill="none"
-              className="text-primary/60 rotate-90"
+              className="text-primary/60 scroll-down-arrow "
             >
               <path
-                d="M5 12h14m-7-7l7 7-7 7"
+                d="M12 5v14m7-7l-7 7-7-7"
                 stroke="var(--primary-color)"
                 strokeWidth="2"
                 strokeLinecap="round"
@@ -274,10 +285,10 @@ export default function Home() {
               height="12"
               viewBox="0 0 24 24"
               fill="none"
-              className="text-primary/60 rotate-90"
+              className="text-primary/60 scroll-down-arrow "
             >
               <path
-                d="M5 12h14m-7-7l7 7-7 7"
+                d="M12 5v14m7-7l-7 7-7-7"
                 stroke="var(--primary-color)"
                 strokeWidth="2"
                 strokeLinecap="round"
@@ -290,10 +301,10 @@ export default function Home() {
               height="8"
               viewBox="0 0 24 24"
               fill="none"
-              className="text-primary/60 rotate-90"
+              className="text-primary/60 scroll-down-arrow "
             >
               <path
-                d="M5 12h14m-7-7l7 7-7 7"
+                d="M12 5v14m7-7l-7 7-7-7"
                 stroke="var(--primary-color)"
                 strokeWidth="2"
                 strokeLinecap="round"
@@ -304,11 +315,15 @@ export default function Home() {
         </div>
       </div>
 
-      <ProjectShowcase />
+        <ProjectShowcase id="project-showcase" />
 
-      <SkillsArsenal />
+        <SkillsArsenal id="skills-arsenal" />
 
-      <OriginStory />
+        <OriginStory id="origin-story" />
+
+        <Contact id="mission-control" />
+
+      <Footer />
     </>
   );
 }

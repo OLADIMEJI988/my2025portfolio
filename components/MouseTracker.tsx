@@ -9,17 +9,17 @@ export default function MouseTracker() {
   const [mountedArrow, setMountedArrow] = useState(false);
   const [strokeColor, setStrokeColor] = useState<string>("");
 
-  // ✅ Watch --primary-color for changes dynamically
   useEffect(() => {
     const updateColor = () => {
       const rootStyles = getComputedStyle(document.documentElement);
-      const primaryColor = rootStyles.getPropertyValue("--primary-color").trim();
+      const primaryColor = rootStyles
+        .getPropertyValue("--primary-color")
+        .trim();
       setStrokeColor(primaryColor || "#703bf7");
     };
 
-    updateColor(); // run once immediately
+    updateColor();
 
-    // Observe changes to style attribute on <html>
     const observer = new MutationObserver(updateColor);
     observer.observe(document.documentElement, {
       attributes: true,
@@ -35,10 +35,17 @@ export default function MouseTracker() {
       setMountedArrow(true);
     };
 
-    window.addEventListener("pointermove", onFirstMove, { once: true, capture: true });
+    window.addEventListener("pointermove", onFirstMove, {
+      once: true,
+      capture: true,
+    });
 
     return () => {
-      window.removeEventListener("pointermove", onFirstMove as any, { capture: true } as any);
+      window.removeEventListener(
+        "pointermove",
+        onFirstMove as any,
+        { capture: true } as any
+      );
     };
   }, []);
 
@@ -53,10 +60,13 @@ export default function MouseTracker() {
 
     const initial = initialEventRef.current;
     if (initial) {
-      const angle = (Math.atan2(
-        initial.clientY - window.innerHeight / 2,
-        initial.clientX - window.innerWidth / 2
-      ) * 180) / Math.PI;
+      const angle =
+        (Math.atan2(
+          initial.clientY - window.innerHeight / 2,
+          initial.clientX - window.innerWidth / 2
+        ) *
+          180) /
+        Math.PI;
 
       arrowEl.style.left = `${initial.clientX}px`;
       arrowEl.style.top = `${initial.clientY}px`;
@@ -65,10 +75,13 @@ export default function MouseTracker() {
     }
 
     const handleMove = (e: MouseEvent) => {
-      const angle = (Math.atan2(
-        e.clientY - window.innerHeight / 2,
-        e.clientX - window.innerWidth / 2
-      ) * 180) / Math.PI;
+      const angle =
+        (Math.atan2(
+          e.clientY - window.innerHeight / 2,
+          e.clientX - window.innerWidth / 2
+        ) *
+          180) /
+        Math.PI;
 
       arrowEl.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
       arrowEl.style.left = `${e.clientX}px`;
@@ -86,6 +99,31 @@ export default function MouseTracker() {
       document.body.style.cursor = prevCursor || "auto";
     };
   }, [mountedArrow]);
+
+  useEffect(() => {
+    const targets = document.querySelectorAll(".arrow-hover");
+
+    const handleEnter = () => setStrokeColor("#fff");
+    const handleLeave = () => {
+      const rootStyles = getComputedStyle(document.documentElement);
+      const primaryColor = rootStyles
+        .getPropertyValue("--primary-color")
+        .trim();
+      setStrokeColor(primaryColor || "#703bf7");
+    };
+
+    targets.forEach((el) => {
+      el.addEventListener("mouseenter", handleEnter);
+      el.addEventListener("mouseleave", handleLeave);
+    });
+
+    return () => {
+      targets.forEach((el) => {
+        el.removeEventListener("mouseenter", handleEnter);
+        el.removeEventListener("mouseleave", handleLeave);
+      });
+    };
+  }, []);
 
   if (!mountedArrow) return null;
 

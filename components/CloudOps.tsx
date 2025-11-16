@@ -53,8 +53,8 @@ export default function CloudOps() {
         <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
       </svg>
 
-      <p className="mt-3 tracking-wide text-[22px] font-light">Cloud Ops</p>
-      <p className="font-light tracking-wider text-sm text-[#888]">
+      <p className="mt-3 tracking-wide text-[22px] font-light font-mono">Cloud Ops</p>
+      <p className="font-light tracking-wider text-sm text-[#888] font-mono">
         Cloud deployment and infrastructure command
       </p>
 

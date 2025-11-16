@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const navItems = [
   {
     label: "Home",
+    id: "home",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,8 @@ const navItems = [
     ),
   },
   {
-    label: "PROJECT SHOWCASE",
+    label: "Project Showcase",
+    id: "project-showcase",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +44,8 @@ const navItems = [
     ),
   },
   {
-    label: "SKILLS ARSENAL",
+    label: "Skills Arsenal",
+    id: "skills-arsenal",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +64,8 @@ const navItems = [
     ),
   },
   {
-    label: "ORIGIN STORY",
+    label: "Origin Story",
+    id: "origin-story",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +84,8 @@ const navItems = [
     ),
   },
   {
-    label: "MISSION CONTROL",
+    label: "Mission Control",
+    id: "mission-control",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -102,22 +107,54 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+
+      for (const item of navItems) {
+        const section = document.getElementById(item.id);
+        if (section) {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          if (scrollPos >= top && scrollPos < bottom) {
+            setActive(item.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // set initial active tab
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleClick = (sectionId: string) => {
+    if (typeof window === "undefined") return; // ensure client
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActive(sectionId);
+    }
+  };
+
   return (
-    <div
-      className="lg:flex items-center gap-5 px-7 py-2 text-[#888] rounded-full 
-                 bg-transparent backdrop-blur-xs border border-(--primary-color)/40"
-    >
+    <div className="lg:flex items-center gap-5 px-7 py-2 text-[#888] rounded-full bg-transparent backdrop-blur-xs border border-(--primary-color)/40">
       {navItems.map((item) => (
         <div
           key={item.label}
-          className="relative py-3 px-3 hover:bg-(--primary-color)/20 
-                     rounded-full text-[10px] transition-all duration-300 
-                     text-muted-foreground hover:text-foreground"
+          onClick={() => handleClick(item.id)}
+          className={`relative py-3 px-3 rounded-full text-[12px] font-[Exan] transition-all duration-300 flex items-center space-x-2 cursor-pointer
+            ${
+              active === item.id
+                ? "bg-(--primary-color) text-white"
+                : "text-[#888]/80 hover:bg-(--primary-color)/20"
+            }`}
         >
-          <div className="flex items-center space-x-2">
-            {item.icon}
-            <span>{item.label}</span>
-          </div>
+          <span>{item.icon}</span>
+          <span>{item.label}</span>
         </div>
       ))}
     </div>

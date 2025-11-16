@@ -85,8 +85,8 @@ export default function CoreArsenal() {
         <path d="m8 6-6 6 6 6"></path>
       </svg>
 
-      <p className="mt-3 tracking-wide text-[22px] font-light">Core Arsenal</p>
-      <p className="font-light tracking-wider text-sm text-[#888]">
+      <p className="mt-3 tracking-wide text-[22px] font-light font-mono">Core Arsenal</p>
+      <p className="font-light tracking-wider text-sm text-[#888] font-mono">
         Primary weapons in the development battlefield
       </p>
 

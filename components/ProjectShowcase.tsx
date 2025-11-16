@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PriorityMissions from "./PriorityMissions";
 import Project from "./Project";
 
-export default function ProjectShowcase() {
+export default function ProjectShowcase({ id }: { id?: string }) {
   const projects = [
     {
       status: "ACTIVE",
@@ -167,23 +167,23 @@ export default function ProjectShowcase() {
   }, [current, isPlaying]);
 
   return (
-    <div className="flex flex-col items-center pt-5 font-sans mb-40">
+    <div id={id} className="flex flex-col items-center pt-5 font-sans mb-40">
       <div className="font-mono flex items-center gap-2 px-4 py-2 text-(--primary-color) rounded-full text-[9px] bg-(--primary-color)/5 backdrop-blur-xs tracking-wider border border-(--primary-color)/50">
-        <div className="w-1.5 h-1.5 rounded-full bg-(--primary-color) animate-pulse"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-(--primary-color) animate-pulse font-mono"></div>
         <p>MISSION PORTFOLIO</p>
       </div>
 
-      <p className="text-6xl tracking-wide my-5 font-extralight">
+      <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
         PROJECT <span className="text-(--primary-color) font-normal">SHOWCASE</span>
       </p>
 
-      <div className="text-[#888] w-[385px] text-[15px] text-center leading-[25px] tracking-wide">
+      <div className="text-[#888] w-[500px] text-[14px] text-center leading-[25px] tracking-wide font-mono">
         <span className="text-(--primary-color)">3+ years</span> of building{" "}
         <span className="text-(--primary-color)">precision-engineered solutions</span>{" "}
         across Health, NFT, Real Estate and scalable systems
       </div>
 
-      <div className="flex gap-16 tracking-wide">
+      <div className="flex gap-16 tracking-wide font-mono">
         <div className="space-y-1 text-center my-5">
           <p className="text-(--primary-color) text-xl">10+</p>
           <p className="text-[9px] text-[#888]">MISSIONS COMPLETED</p>
@@ -340,7 +340,7 @@ export default function ProjectShowcase() {
         ))}
       </div>
 
-      <div className="flex items-center gap-6 mt-16 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-5 py-4 rounded-xl">
+      <div className="flex items-center font-mono gap-6 mt-16 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-5 py-4 rounded-xl">
         <div className="flex flex-col items-center">
           <p className="text-(--primary-color)">23</p>
           <p className="text-[#888] text-[10px]">TOTAL MISSIONS</p>

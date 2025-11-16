@@ -1,18 +1,18 @@
 "use client";
 
-export default function OriginStory() {
+export default function OriginStory({ id }: { id?: string }) {
   return (
-    <div className="flex flex-col items-center pt-5 font-sans mb-40">
+    <div id={id} className="flex flex-col items-center pt-5 font-sans mb-40">
       <div className="flex font-mono items-center gap-2 px-4 py-2 text-(--primary-color) rounded-full text-[9px] bg-(--primary-color)/5 backdrop-blur-xs tracking-wider border border-(--primary-color)/50">
         <div className="w-1.5 h-1.5 rounded-full bg-(--primary-color) animate-pulse"></div>
         <p>THE STORY</p>
       </div>
 
-      <p className="text-6xl tracking-wide my-5 font-extralight">
+      <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
         ORIGIN <span className="text-(--primary-color) font-normal">STORY</span>
       </p>
 
-      <div className="text-[#888] w-[530px] text-[15px] text-center leading-[25px] tracking-wide">
+      <div className="text-[#888] w-[580px] text-[14px] text-center leading-[25px] tracking-wide font-mono">
         <p>
           From my early days writing simple scripts to{" "}
           <span className="text-(--primary-color)">
@@ -45,12 +45,12 @@ export default function OriginStory() {
               <circle cx="12" cy="12" r="6"></circle>
               <circle cx="12" cy="12" r="2"></circle>
             </svg>
-            <p className="text-[27px] tracking-wide font-light absolute left-3 top-1">
+            <p className="text-[27px] tracking-wide font-light absolute left-3 top-1 font-[Exan]">
               WHERE VISION FINDS FORM
             </p>
           </div>
 
-          <div className="flex flex-col gap-5 leading-7 text-[#888] text-[15px]">
+          <div className="flex flex-col gap-5 leading-7 text-[#888] text-[14px] font-mono">
             <p>
               My journey into tech started in 2020. Over the years, I’ve grown
               into a frontend developer with a strong foundation in modern web
@@ -89,7 +89,7 @@ export default function OriginStory() {
             </p>
           </div>
 
-          <div className="flex items-center gap-20 mt-10 tracking-wide">
+          <div className="flex items-center gap-20 mt-10 tracking-wide font-mono">
             <div className="flex items-center text-[#888] text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -181,9 +181,9 @@ export default function OriginStory() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentcolor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-crosshair w-6 h-6"
               aria-hidden="true"
             >
@@ -199,7 +199,7 @@ export default function OriginStory() {
         </div>
 
         <div className="w-[42%]">
-          <div className="flex items-center">
+          <div className="flex items-center font-[Exan]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -230,9 +230,9 @@ export default function OriginStory() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="var(--primary-color)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-crosshair w-6 h-6 mt-2"
               aria-hidden="true"
             >
@@ -245,7 +245,7 @@ export default function OriginStory() {
 
             <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
               <p>2016 - 2020</p>
-              <div className="font-sans mt-3">
+              <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Foundation Years</p>
                 <p className="my-1 font-light text-[11px]">Building the Base</p>
                 <p className="text-[#888] leading-4 text-[10px] mt-2">
@@ -273,9 +273,9 @@ export default function OriginStory() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="var(--primary-color)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-crosshair w-6 h-6 mt-2"
               aria-hidden="true"
             >
@@ -288,7 +288,7 @@ export default function OriginStory() {
 
             <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
               <p>2021 - 2025</p>
-              <div className="font-sans mt-3">
+              <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Discovery Phase</p>
                 <p className="my-1 font-light text-[11px]">
                   Frontend Emergence
@@ -319,9 +319,9 @@ export default function OriginStory() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="var(--primary-color)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-crosshair w-6 h-6 mt-2"
               aria-hidden="true"
             >
@@ -334,7 +334,7 @@ export default function OriginStory() {
 
             <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
               <p>2023 - 2025</p>
-              <div className="font-sans mt-3">
+              <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Evolution Era</p>
                 <p className="my-1 font-light text-[11px]">
                   Fullstack Emergence
@@ -364,9 +364,9 @@ export default function OriginStory() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="var(--primary-color)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-crosshair w-6 h-6 mt-2"
               aria-hidden="true"
             >
@@ -379,7 +379,7 @@ export default function OriginStory() {
 
             <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
               <p>2024 - Present</p>
-              <div className="font-sans mt-3">
+              <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Specialization Period</p>
                 <p className="my-1 font-light text-[11px]">
                   Web Development Focus
@@ -402,6 +402,63 @@ export default function OriginStory() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="font-mono text-[11px] flex items-center mb-px mt-20 bg-(--primary-color)/2 tracking-wider border border-(--primary-color)/40 px-6 py-3 rounded-xl">
+        <p>STORY + TIMELINE: SYNCHRONIZED</p>
+      </div>
+
+      <div className="w-[65%] mb-px mt-28 bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/40 px-6 py-4 rounded-xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#888"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-target w-8 h-8 mb-2 opacity-20"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+
+        <div className="w-full flex flex-col items-center font-[Exan]">
+          <p className="text-[26px] font-extralight">TACTICAL PHILOSOPHY</p>
+          <div className="text-[#888] italic text-[18px] mt-3 flex flex-col items-center">
+            <p>"To be exceptional, you have to be the exception.</p>
+
+            <p>Break the default settings"</p>
+          </div>
+        </div>
+
+        <p className="font-[Exan] italic flex justify-center items-center w-full mt-5 tracking-wider text-[16px] font-light">
+          — SHOLANKE OLADIMEJI [ CODENAME: SPARK ] —
+        </p>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#888"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-crosshair right-0 w-8 h-8 mt-2 opacity-20 ml-auto"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="22" x2="18" y1="12" y2="12"></line>
+          <line x1="6" x2="2" y1="12" y2="12"></line>
+          <line x1="12" x2="12" y1="6" y2="2"></line>
+          <line x1="12" x2="12" y1="22" y2="18"></line>
+        </svg>
       </div>
     </div>
   );

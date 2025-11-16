@@ -84,8 +84,8 @@ export default function UiWeapons() {
           <path d="M12 18h.01"></path>
         </svg>
 
-      <p className="mt-3 tracking-wide text-[22px] font-light">UI Weapons</p>
-      <p className="font-light tracking-wider text-sm text-[#888]">
+      <p className="mt-3 tracking-wide text-[22px] font-light font-mono">UI Weapons</p>
+      <p className="font-light tracking-wider text-sm text-[#888] font-mono">
         Frontend frameworks and library
       </p>
 

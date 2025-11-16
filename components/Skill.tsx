@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 interface CardProps {
   skill: string;
@@ -26,16 +25,16 @@ export default function Skill({
   return (
     <div className="bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 rounded-2xl w-full py-12 px-5 hover:shadow-[0_0_8px_var(--primary-color)] transition duration-700 ease-in-out">
       <div className="flex justify-between">
-        <p>{skill}</p>
+        <p className="font-[SpaceMono]">{skill}</p>
         <div className="flex gap-2 items-center">
           <div className="w-2 h-2 bg-(--primary-color) rounded-full"></div>
           <div className="border border-(--primary-color)/60 rounded-[7px] text-(--primary-color) p-[5px] text-[10px] tracking-wider">
-            <p>{level}</p>
+            <p className="font-modal-fullscreen-xl-down">{level}</p>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between text-[#888] font-light text-xs mt-4">
+      <div className="flex justify-between text-[#888] font-light text-xs mt-4 font-mono tracking-normal">
         <p>{readiness}</p>
         <p>{percentage}</p>
       </div>
@@ -48,7 +47,7 @@ export default function Skill({
         ></div>
       </div>
 
-      <div className="flex gap-30 mt-5">
+      <div className="flex gap-30 mt-5 font-[SpaceMono]">
         <div className="text-xs">
           <p className="text-[#888] font-light">Years Active</p>
           <p className="mt-1 text-(--primary-color)">{year}</p>
@@ -65,7 +64,7 @@ export default function Skill({
         <p className="text-(--primary-color)">{status}</p>
       </div>
 
-      <p className="text-[10px] text-[#888] tracking-wider mt-5">
+      <p className="text-[10px] text-[#888] tracking-wider mt-5 font-mono">
         Active in {mission_active_num} mission(s)
       </p>
     </div>

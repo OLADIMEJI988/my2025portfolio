@@ -97,13 +97,13 @@ export default function PriorityMissions({
       </div>
 
       <div>
-        <p className="mt-3 text-lg tracking-wide">{name}</p>
+        <p className="mt-3 text-xl tracking-wide font-[SpaceMono]">{name}</p>
         <p className="font-mono font-light text-(--primary-color) text-xs my-0.5">
           {subtext}
         </p>
 
         <div className="mt-5 text-[#888] text-sm tracking-wide">
-          <p className="leading-6">{about}</p>
+          <p className="leading-6 font-[SpaceMono]">{about}</p>
         </div>
 
         <p className="text-xs tracking-wider font-mono text-[#888] font-light mt-5">
@@ -111,7 +111,7 @@ export default function PriorityMissions({
         </p>
 
         <div className="flex gap-2 text-[11px] tracking-wider font-light mt-1 mb-4">
-          <div className="flex gap-2 text-[11px] tracking-wider font-light flex-wrap">
+          <div className="flex gap-2 text-[11px] tracking-wider font-light flex-wrap font-[SpaceMono]">
             {skill.split(",").map((s, i) => (
               <div
                 key={i}
@@ -126,7 +126,7 @@ export default function PriorityMissions({
           </div>
         </div>
 
-        <div className="flex gap-40">
+        <div className="flex gap-40 font-[SpaceMono]">
           <div className="text-xs">
             <p className="text-[#888] font-light">YEAR</p>
             <p className="mt-1">{year}</p>
@@ -140,10 +140,10 @@ export default function PriorityMissions({
 
         <button
           onClick={handleClick}
-          className="bg-(--primary-color) px-2.5 py-3 mt-6 rounded-lg flex items-center gap-2 cursor-none"
+          className="bg-(--primary-color) px-2.5 py-3 mt-6 rounded-lg flex items-center gap-2 cursor-none arrow-hover"
         >
           <Rocket />
-          <p className="text-(--primary-color-dark) text-xs">{btntext}</p>
+          <p className="text-(--primary-color-dark) text-xs font-[Exan]">{btntext}</p>
         </button>
       </div>
     </div>

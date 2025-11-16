@@ -52,14 +52,14 @@ export default function Project({
 
         <div className="flex items-center mt-[60px] gap-16">
           <div>
-            <p className="text-foreground hover:text-(--primary-color) text-2xl font-semibold tracking-wider">
+            <p className="text-foreground hover:text-(--primary-color) text-2xl tracking-wider font-[SpaceMono] font-light">
               {name}
             </p>
             <p className="font-mono font-light text-(--primary-color) text-sm my-1">
               {subtext}
             </p>
             <div className="text-xs flex gap-3 font-mono tracking-wider mt-3">
-              <div className="bg-(--primary-color) px-2.5 py-2 rounded-lg flex items-center gap-1">
+              <div className="bg-(--primary-color) px-2.5 py-2 rounded-lg flex items-center gap-1 arrow-hover">
                 <svg
                   stroke="var(--primary-color-dark)"
                   fill="none"
@@ -93,7 +93,7 @@ export default function Project({
               </div>
             </div>
 
-            <div className="mt-5 text-[#888] text-sm tracking-wide">
+            <div className="mt-5 text-[#888] text-sm tracking-wide font-[SpaceMono]">
               <p className="leading-6">{about}</p>
             </div>
 
@@ -102,7 +102,7 @@ export default function Project({
             </p>
 
             <div className="flex gap-2 text-[11px] tracking-wider font-light mt-1">
-              <div className="flex gap-2 text-[11px] tracking-wider font-light flex-wrap">
+              <div className="flex gap-2 text-[11px] tracking-wider font-light flex-wrap font-[SpaceMono]">
                 {skill.split(",").map((s, i) => (
                   <div
                     key={i}
@@ -114,9 +114,9 @@ export default function Project({
               </div>
             </div>
 
-            <button className="bg-(--primary-color) px-2.5 py-3 mt-5 rounded-lg flex items-center gap-2 cursor-none">
+            <button className="bg-(--primary-color) px-2.5 py-3 mt-5 rounded-lg flex items-center gap-2 cursor-none arrow-hover">
               <Rocket />
-              <p className="text-(--primary-color-dark) text-xs">{btntext}</p>
+              <p className="text-(--primary-color-dark) text-[13px] font-[Exan]">{btntext}</p>
             </button>
           </div>
 

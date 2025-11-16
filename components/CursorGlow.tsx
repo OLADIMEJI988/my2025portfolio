@@ -6,7 +6,6 @@ export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
   const [primaryColorRGB, setPrimaryColorRGB] = useState<string>("112, 59, 247"); // default
 
-  // ✅ Watch --primary-color-rgb dynamically
   useEffect(() => {
     const updateColor = () => {
       const rootStyles = getComputedStyle(document.documentElement);
@@ -14,9 +13,8 @@ export default function CursorGlow() {
       if (rgb) setPrimaryColorRGB(rgb);
     };
 
-    updateColor(); // run once immediately
+    updateColor(); 
 
-    // Observe changes to <html> style
     const observer = new MutationObserver(updateColor);
     observer.observe(document.documentElement, {
       attributes: true,
@@ -50,7 +48,7 @@ export default function CursorGlow() {
       window.removeEventListener("mousemove", handleMove);
       window.removeEventListener("mouseout", handleLeave);
     };
-  }, [primaryColorRGB]); // ✅ react to changes
+  }, [primaryColorRGB]); 
 
   return (
     <div
