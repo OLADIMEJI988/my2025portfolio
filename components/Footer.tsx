@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="space-y-6 tracking-wider translate-y-3">
+        <div className="space-y-6 tracking-wider">
           <div className="text-center font-mono">
             <h3 className="text-lg font-extralight mb-4">
               Direct Communications
@@ -131,7 +131,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Soft Top Fade */}
       <div className="absolute inset-0 bg-linear-to-t from-background to-background/60 pointer-events-none" />
     </footer>
   );

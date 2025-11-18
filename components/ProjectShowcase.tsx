@@ -11,6 +11,21 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       name: "Estatein",
       subtext: "Real Estate Infrastructure",
       priority: "ALPHA PRIORITY",
+      icon: (
+        <svg
+          stroke="var(--primary-color-dark)"
+          fill="none"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          height="12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M18.1 6c-1.1 2.913 -1.9 4.913 -2.4 6c-1.879 4.088 -3.713 6 -6 6c-2.4 0 -4.8 -2.4 -4.8 -6s2.4 -6 4.8 -6c2.267 0 4.135 1.986 6 6c.512 1.102 1.312 3.102 2.4 6"></path>
+        </svg>
+      ),
       category: "Enterprise",
       about:
         "Estatein is a modern real estate platform that makes finding and exploring homes seamless and enjoyable, offering a clean interface, and intelligent features that help users discover their ideal properties with ease and confidence.",
@@ -24,6 +39,21 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       name: "Medlaison",
       subtext: "Healthcare Management",
       priority: "BETA PRIORITY",
+      icon: (
+        <svg
+          stroke="var(--primary-color-dark)"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M8 22v-14a4 4 0 0 1 4 -4h.5a3.5 3.5 0 0 1 0 7h-.5h.5a4.5 4.5 0 1 1 -4.5 4.5v-.5"></path>
+        </svg>
+      ),
       category: "Healthcare",
       about:
         "Medlaison is a modern healthcare platform that makes managing medical services, appointments, and patient communication seamless and intuitive, offering a clean interface, and intelligent features that help users navigate healthcare with ease.",
@@ -37,6 +67,21 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       name: "The QueenAritCircle",
       subtext: "Community Empowerment Hub",
       priority: "ALPHA PRIORITY",
+      icon: (
+        <svg
+          stroke="var(--primary-color-dark)"
+          fill="none"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          height="12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M18.1 6c-1.1 2.913 -1.9 4.913 -2.4 6c-1.879 4.088 -3.713 6 -6 6c-2.4 0 -4.8 -2.4 -4.8 -6s2.4 -6 4.8 -6c2.267 0 4.135 1.986 6 6c.512 1.102 1.312 3.102 2.4 6"></path>
+        </svg>
+      ),
       category: "Community",
       about:
         "The Queen Arit Circle is a modern career‑growth community that makes building tech, product and design skills seamless and intuitive, offering intelligent support that helps early‑career professionals advance with confidence and clarity.",
@@ -50,6 +95,21 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       name: "NFT Marketplace",
       subtext: "Digital Collectibles Platform",
       priority: "ALPHA PRIORITY",
+      icon: (
+        <svg
+          stroke="var(--primary-color-dark)"
+          fill="none"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          height="12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M18.1 6c-1.1 2.913 -1.9 4.913 -2.4 6c-1.879 4.088 -3.713 6 -6 6c-2.4 0 -4.8 -2.4 -4.8 -6s2.4 -6 4.8 -6c2.267 0 4.135 1.986 6 6c.512 1.102 1.312 3.102 2.4 6"></path>
+        </svg>
+      ),
       category: "Web3",
       about:
         "NFT Marketplace is a modern digital asset platform that makes discovering, minting, and trading NFTs simple and engaging, built with smart tools that help creators and collectors connect through the blockchain seamlessly",
@@ -63,6 +123,21 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       name: "Optimal",
       subtext: "Business Optimization solutions",
       priority: "BETA PRIORITY",
+      icon: (
+        <svg
+          stroke="var(--primary-color-dark)"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M8 22v-14a4 4 0 0 1 4 -4h.5a3.5 3.5 0 0 1 0 7h-.5h.5a4.5 4.5 0 1 1 -4.5 4.5v-.5"></path>
+        </svg>
+      ),
       category: "Automation",
       about:
         "Optimal is a modern tax‑and‑accounting platform that makes managing finances, payroll and compliance seamless and intuitive, offering a clean interface and intelligent support that helps businesses stay focused on growth with confidence.",
@@ -76,6 +151,21 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       name: "Foodzero",
       subtext: "Sustainable Food Network",
       priority: "ALPHA PRIORITY",
+      icon: (
+        <svg
+          stroke="var(--primary-color-dark)"
+          fill="none"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          height="12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M18.1 6c-1.1 2.913 -1.9 4.913 -2.4 6c-1.879 4.088 -3.713 6 -6 6c-2.4 0 -4.8 -2.4 -4.8 -6s2.4 -6 4.8 -6c2.267 0 4.135 1.986 6 6c.512 1.102 1.312 3.102 2.4 6"></path>
+        </svg>
+      ),
       category: "Dining",
       about:
         "FoodZero is a modern food platform that makes accessing healthy meals and reducing food waste seamless and intuitive, offering a clean interface, and intelligent features that help users plan, order, and enjoy wholesome food efficiently.",
@@ -174,12 +264,15 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       </div>
 
       <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
-        PROJECT <span className="text-(--primary-color) font-normal">SHOWCASE</span>
+        PROJECT{" "}
+        <span className="text-(--primary-color) font-normal">SHOWCASE</span>
       </p>
 
       <div className="text-[#888] w-[500px] text-[14px] text-center leading-[25px] tracking-wide font-mono">
         <span className="text-(--primary-color)">3+ years</span> of building{" "}
-        <span className="text-(--primary-color)">precision-engineered solutions</span>{" "}
+        <span className="text-(--primary-color)">
+          precision-engineered solutions
+        </span>{" "}
         across Health, NFT, Real Estate and scalable systems
       </div>
 
@@ -201,7 +294,8 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       </div>
 
       <p className="text-[28px] font-extralight tracking-wide">
-        Flagship <span className="text-(--primary-color) font-normal">Operations</span>
+        Flagship{" "}
+        <span className="text-(--primary-color) font-normal">Operations</span>
       </p>
       <p className="text-[11px] font-mono tracking-wider text-[#888]">
         Current active missions with highest strategic value
@@ -214,7 +308,6 @@ export default function ProjectShowcase({ id }: { id?: string }) {
           xl:min-h-[510px] 
           [@media(min-width:1300px)]:min-h-[560px]
           [@media(min-width:1400px)]:min-h-[600px]"
-          
       >
         {projects.map((project, i) => (
           <div
@@ -256,7 +349,9 @@ export default function ProjectShowcase({ id }: { id?: string }) {
             <div
               key={i}
               className={`h-2.5 w-2.5 rounded-full ${
-                current === i ? "bg-(--primary-color) w-6 rounded-full" : "bg-[#323232]"
+                current === i
+                  ? "bg-(--primary-color) w-6 rounded-full"
+                  : "bg-[#323232]"
               }`}
             ></div>
           ))}
@@ -324,7 +419,11 @@ export default function ProjectShowcase({ id }: { id?: string }) {
           </svg>
         )}
 
-        <p className={`text-[11px] ${isPlaying ? "text-[#5f5f5f]" : "text-(--primary-color)"}`}>
+        <p
+          className={`text-[11px] ${
+            isPlaying ? "text-[#5f5f5f]" : "text-(--primary-color)"
+          }`}
+        >
           {isPlaying ? "Pause Auto-Play" : "Resume Auto-Play"}
         </p>
       </button>

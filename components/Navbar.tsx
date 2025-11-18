@@ -127,7 +127,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // set initial active tab
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -141,22 +141,24 @@ export default function Navbar() {
   };
 
   return (
-    <div className="lg:flex items-center gap-5 px-7 py-2 text-[#888] rounded-full bg-transparent backdrop-blur-xs border border-(--primary-color)/40">
-      {navItems.map((item) => (
-        <div
-          key={item.label}
-          onClick={() => handleClick(item.id)}
-          className={`relative py-3 px-3 rounded-full text-[12px] font-[Exan] transition-all duration-300 flex items-center space-x-2 cursor-pointer
+    <>
+      <div className="lg:flex items-center gap-5 px-7 py-2 text-[#888] rounded-full bg-transparent backdrop-blur-xs border border-(--primary-color)/40">
+        {navItems.map((item) => (
+          <div
+            key={item.label}
+            onClick={() => handleClick(item.id)}
+            className={`relative py-3 px-3 rounded-full text-[12px] font-[Exan] transition-all duration-300 flex items-center space-x-2 cursor-none
             ${
               active === item.id
                 ? "bg-(--primary-color) text-white"
                 : "text-[#888]/80 hover:bg-(--primary-color)/20"
             }`}
-        >
-          <span>{item.icon}</span>
-          <span>{item.label}</span>
-        </div>
-      ))}
-    </div>
+          >
+            <span>{item.icon}</span>
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

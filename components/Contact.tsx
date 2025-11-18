@@ -2,7 +2,7 @@
 
 export default function Contact({ id }: { id?: string }) {
   return (
-    <div id={id} className="flex flex-col items-center mb-36 font-mono">
+    <div id={id} className="flex flex-col items-center pt-5 mb-40 font-mono">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -26,7 +26,7 @@ export default function Contact({ id }: { id?: string }) {
         to life.
       </p>
 
-      <div className="w-[60%] border border-(--primary-color)/50 rounded-xl py-10 px-8 mt-10">
+      <div className="w-[60%] bg-(--primary-color)/3 border border-(--primary-color)/50 rounded-xl py-10 px-8 mt-10">
         <p className="text-center text-xl font-sans font-light tracking-wide">
           Get In Touch
         </p>
@@ -70,7 +70,7 @@ export default function Contact({ id }: { id?: string }) {
           ></textarea>
         </div>
 
-        <button className="bg-(--primary-color)/90 w-full py-3 flex justify-center mt-10 rounded-xl arrow-hover font-[Exan] tracking-wider">Send Message</button>
+        <button className="bg-(--primary-color)/90 w-full py-3 flex justify-center mt-10 rounded-xl arrow-hover font-[Exan] tracking-wider cursor-none">Send Message</button>
       </div>
     </div>
   );

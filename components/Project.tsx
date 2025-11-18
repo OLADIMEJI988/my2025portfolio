@@ -8,6 +8,7 @@ interface ProjectProps {
   name: string;
   subtext: string;
   priority: string;
+  icon: string;
   category: string;
   about: string;
   skill: string;
@@ -21,6 +22,7 @@ export default function Project({
   name,
   subtext,
   priority,
+  icon,
   category,
   about,
   skill,
@@ -60,20 +62,10 @@ export default function Project({
             </p>
             <div className="text-xs flex gap-3 font-mono tracking-wider mt-3">
               <div className="bg-(--primary-color) px-2.5 py-2 rounded-lg flex items-center gap-1 arrow-hover">
-                <svg
-                  stroke="var(--primary-color-dark)"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  height="12"
-                  width="12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18.1 6c-1.1 2.913 -1.9 4.913 -2.4 6c-1.879 4.088 -3.713 6 -6 6c-2.4 0 -4.8 -2.4 -4.8 -6s2.4 -6 4.8 -6c2.267 0 4.135 1.986 6 6c.512 1.102 1.312 3.102 2.4 6"></path>
-                </svg>
-                <p className="font-light text-(--primary-color-dark)">{priority}</p>
+                <span>{icon}</span>
+                <p className="font-light text-(--primary-color-dark)">
+                  {priority}
+                </p>
               </div>
 
               <div className="border border-(--primary-color) px-2.5 py-2 rounded-lg flex items-center gap-1">
@@ -116,7 +108,9 @@ export default function Project({
 
             <button className="bg-(--primary-color) px-2.5 py-3 mt-5 rounded-lg flex items-center gap-2 cursor-none arrow-hover">
               <Rocket />
-              <p className="text-(--primary-color-dark) text-[13px] font-[Exan]">{btntext}</p>
+              <p className="text-(--primary-color-dark) text-[13px] font-[Exan]">
+                {btntext}
+              </p>
             </button>
           </div>
 

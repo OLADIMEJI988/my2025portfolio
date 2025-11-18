@@ -243,7 +243,7 @@ export default function OriginStory({ id }: { id?: string }) {
               <line x1="12" x2="12" y1="22" y2="18"></line>
             </svg>
 
-            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
+            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md hover:translate-x-2 transition-transform duration-600 ease-in-out">
               <p>2016 - 2020</p>
               <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Foundation Years</p>
@@ -286,7 +286,7 @@ export default function OriginStory({ id }: { id?: string }) {
               <line x1="12" x2="12" y1="22" y2="18"></line>
             </svg>
 
-            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
+            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md hover:translate-x-2 transition-transform duration-600 ease-in-out">
               <p>2021 - 2025</p>
               <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Discovery Phase</p>
@@ -332,7 +332,7 @@ export default function OriginStory({ id }: { id?: string }) {
               <line x1="12" x2="12" y1="22" y2="18"></line>
             </svg>
 
-            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
+            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md hover:translate-x-2 transition-transform duration-600 ease-in-out">
               <p>2023 - 2025</p>
               <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Evolution Era</p>
@@ -377,7 +377,7 @@ export default function OriginStory({ id }: { id?: string }) {
               <line x1="12" x2="12" y1="22" y2="18"></line>
             </svg>
 
-            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md">
+            <div className="font-mono text-[11px] w-full flex flex-col bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-4 py-4 rounded-md hover:translate-x-2 transition-transform duration-600 ease-in-out">
               <p>2024 - Present</p>
               <div className="font-[SpaceMono] mt-3">
                 <p className="font-medium text-[13px]">Specialization Period</p>
