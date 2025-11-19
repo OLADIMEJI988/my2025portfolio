@@ -11,8 +11,8 @@ interface AnimateOnViewProps {
 export default function AnimateOnView({ children }: AnimateOnViewProps) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.2, // trigger when 20% of element is visible
-    triggerOnce: false, // animate every time it enters/leaves
+    threshold: 0.2, 
+    triggerOnce: false,
   });
 
   useEffect(() => {

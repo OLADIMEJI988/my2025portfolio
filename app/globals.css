@@ -36,6 +36,14 @@
   }
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background: var(--background);
   transition: background-color 0.3s ease;
@@ -46,7 +54,7 @@ body {
 
 .bg-lines {
   position: relative;
-  background-color: #0a0a0a;
+  background-color: var(--background);
   background-image: linear-gradient(
       rgba(var(--primary-color-rgb), 0.07) 1px,
       transparent 1px
@@ -165,4 +173,12 @@ img {
 #origin-story,
 #mission-control {
   scroll-margin-top: 80px;
+}
+
+.scramble {
+  user-select: none;
+}
+
+.scramble span {
+  transition: opacity 0.1s;
 }

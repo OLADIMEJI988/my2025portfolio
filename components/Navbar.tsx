@@ -132,7 +132,7 @@ export default function Navbar() {
   }, []);
 
   const handleClick = (sectionId: string) => {
-    if (typeof window === "undefined") return; // ensure client
+    if (typeof window === "undefined") return; 
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -142,20 +142,20 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="lg:flex items-center gap-5 px-7 py-2 text-[#888] rounded-full bg-transparent backdrop-blur-xs border border-(--primary-color)/40">
+      <div className="flex items-center gap-5 max-lg:gap-0 px-7 max-lg:px-3 py-1 lg:py-2 text-[#888] rounded-full bg-transparent backdrop-blur-xs border border-(--primary-color)/40">
         {navItems.map((item) => (
           <div
             key={item.label}
             onClick={() => handleClick(item.id)}
-            className={`relative py-3 px-3 rounded-full text-[12px] font-[Exan] transition-all duration-300 flex items-center space-x-2 cursor-none
+            className={`relative py-3 px-3 max-lg:px-2 rounded-full text-[12px] font-[Exan] transition-all duration-300 flex items-center lg:space-x-2 cursor-none
             ${
               active === item.id
-                ? "bg-(--primary-color) text-white"
+                ? "lg:bg-(--primary-color) text-(--primary-color) lg:text-white"
                 : "text-[#888]/80 hover:bg-(--primary-color)/20"
             }`}
           >
             <span>{item.icon}</span>
-            <span>{item.label}</span>
+            <span className="max-lg:hidden">{item.label}</span>
           </div>
         ))}
       </div>

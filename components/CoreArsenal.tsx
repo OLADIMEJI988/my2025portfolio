@@ -86,11 +86,11 @@ export default function CoreArsenal() {
       </svg>
 
       <p className="mt-3 tracking-wide text-[22px] font-light font-mono">Core Arsenal</p>
-      <p className="font-light tracking-wider text-sm text-[#888] font-mono">
+      <p className="font-light text-center tracking-wider text-sm text-[#888] font-mono">
         Primary weapons in the development battlefield
       </p>
 
-      <div className="w-[93%] grid grid-cols-3 gap-5 mt-7">
+      <div className="w-[95%] lg:w-[93%] grid lg:grid-cols-3 gap-5 mt-7">
         {skillsData.map((skillItem) => (
           <Skill key={skillItem.skill} {...skillItem} />
         ))}

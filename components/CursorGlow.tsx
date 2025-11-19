@@ -53,7 +53,7 @@ export default function CursorGlow() {
   return (
     <div
       ref={glowRef}
-      className="cursor-glow fixed inset-0 pointer-events-none z-10"
+      className="cursor-glow fixed inset-0 pointer-events-none z-10 max-lg:hidden"
       style={{
         mixBlendMode: "lighten",
         transition: "background 0.1s ease-out",

@@ -1,5 +1,7 @@
 "use client";
 
+import ScrambleText from "./ScrambleText";
+
 export default function Contact({ id }: { id?: string }) {
   return (
     <div id={id} className="flex flex-col items-center pt-5 mb-40 font-mono">
@@ -20,17 +22,19 @@ export default function Contact({ id }: { id?: string }) {
         <rect x="2" y="4" width="20" height="16" rx="2"></rect>
       </svg>
 
-      <p className="font-light text-6xl tracking-wide font-[Exan]">Contact Me</p>
-      <p className="font-light text-[#888] mt-2 text-[15px]">
+      <p className="font-light text-3xl lg:text-6xl tracking-wide font-[Exan]">
+        Contact Me
+      </p>
+      <p className="font-light text-[#888] mt-2 text-center text-[13px] lg:text-[15px] px-3">
         Ready to work together? Let's discuss your project and bring your ideas
         to life.
       </p>
 
-      <div className="w-[60%] bg-(--primary-color)/3 border border-(--primary-color)/50 rounded-xl py-10 px-8 mt-10">
+      <div className="w-[95%] lg:w-[60%] bg-(--primary-color)/3 border border-(--primary-color)/50 rounded-xl py-10 px-4 lg:px-8 mt-10">
         <p className="text-center text-xl font-sans font-light tracking-wide">
           Get In Touch
         </p>
-        <div className="flex gap-8 mt-10">
+        <div className="flex gap-5 lg:gap-8 mt-10">
           <div className="w-full tracking-wide">
             <p>Name</p>
             <input
@@ -70,7 +74,11 @@ export default function Contact({ id }: { id?: string }) {
           ></textarea>
         </div>
 
-        <button className="bg-(--primary-color)/90 w-full py-3 flex justify-center mt-10 rounded-xl arrow-hover font-[Exan] tracking-wider cursor-none">Send Message</button>
+        <button className="bg-(--primary-color)/90 w-full py-3 flex justify-center mt-10 rounded-xl arrow-hover font-[Exan] tracking-wider cursor-none hover:scale-101 transition-all duration-800">
+          <p>
+            <ScrambleText text="Send Message" />
+          </p>
+        </button>
       </div>
     </div>
   );

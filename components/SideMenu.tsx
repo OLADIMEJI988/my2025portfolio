@@ -63,7 +63,7 @@ export default function SideMenu() {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed right-7 top-8 z-40 bg-background text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 hover:scale-105 transition"
+        className="fixed right-5 lg:right-7 max-lg:bottom-8 lg:top-8 z-40 bg-background text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 hover:scale-105 transition cursor-none"
         style={{
           borderColor: "var(--primary-color)",
           borderWidth: "1px",
@@ -115,7 +115,7 @@ export default function SideMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute right-7 top-22 w-72 bg-background rounded-xl shadow-2xl border border-(--primary-color)/50 z-50 p-4"
+            className="absolute right-5 lg:right-7 max-lg:bottom-22 lg:top-22 w-72 bg-background rounded-xl shadow-2xl border border-(--primary-color)/50 z-50 p-4"
             style={{ position: "fixed" }}
           >
             <div className="flex bg-[#1a1a1a] p-1 rounded-lg mb-4 relative text-[13px] h-[45px]">

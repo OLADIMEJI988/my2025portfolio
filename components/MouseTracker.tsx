@@ -149,7 +149,7 @@ export default function MouseTracker() {
         }
       `}</style>
 
-      <div id="ArrowIconContainer" ref={containerRef}>
+      <div className="max-lg:hidden" id="ArrowIconContainer" ref={containerRef}>
         <svg
           id="ArrowIcon"
           viewBox="0 0 24 24"

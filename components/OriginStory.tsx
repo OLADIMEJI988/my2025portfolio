@@ -1,6 +1,16 @@
 "use client";
 
+import ScrambleText from "./ScrambleText";
+
 export default function OriginStory({ id }: { id?: string }) {
+  const link = "https://github.com/OLADIMEJI988";
+
+  const handleClick = () => {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
+
   return (
     <div id={id} className="flex flex-col items-center pt-5 font-sans mb-40">
       <div className="flex font-mono items-center gap-2 px-4 py-2 text-(--primary-color) rounded-full text-[9px] bg-(--primary-color)/5 backdrop-blur-xs tracking-wider border border-(--primary-color)/50">
@@ -8,11 +18,11 @@ export default function OriginStory({ id }: { id?: string }) {
         <p>THE STORY</p>
       </div>
 
-      <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
+      <p className="text-3xl lg:text-6xl tracking-wide my-5 font-extralight font-[Exan]">
         ORIGIN <span className="text-(--primary-color) font-normal">STORY</span>
       </p>
 
-      <div className="text-[#888] w-[580px] text-[14px] text-center leading-[25px] tracking-wide font-mono">
+      <div className="text-[#888] lg:w-[580px] text-[12px] lg:text-[14px] text-center leading-[25px] tracking-wide font-mono">
         <p>
           From my early days writing simple scripts to{" "}
           <span className="text-(--primary-color)">
@@ -25,8 +35,8 @@ export default function OriginStory({ id }: { id?: string }) {
         </p>
       </div>
 
-      <div className="flex w-[93%] justify-between mt-[70px] relative">
-        <div className="w-[42%]">
+      <div className="flex max-lg:flex-col w-[95%] lg:w-[93%] justify-between mt-[70px] relative">
+        <div className="lg:w-[42%]">
           <div className="flex items-center mb-11 relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +55,12 @@ export default function OriginStory({ id }: { id?: string }) {
               <circle cx="12" cy="12" r="6"></circle>
               <circle cx="12" cy="12" r="2"></circle>
             </svg>
-            <p className="text-[27px] tracking-wide font-light absolute left-3 top-1 font-[Exan]">
+            <p className="text-[25px] lg:text-[27px] tracking-wide font-light absolute left-3 top-1 font-[Exan]">
               WHERE VISION FINDS FORM
             </p>
           </div>
 
-          <div className="flex flex-col gap-5 leading-7 text-[#888] text-[14px] font-mono">
+          <div className="flex flex-col gap-5 leading-7 text-[#888] text-[13px] lg:text-sm font-mono">
             <p>
               My journey into tech started in 2020. Over the years, I’ve grown
               into a frontend developer with a strong foundation in modern web
@@ -89,8 +99,8 @@ export default function OriginStory({ id }: { id?: string }) {
             </p>
           </div>
 
-          <div className="flex items-center gap-20 mt-10 tracking-wide font-mono">
-            <div className="flex items-center text-[#888] text-sm">
+          <div className="flex items-center gap-12 lg:gap-20 mt-10 tracking-wide font-mono">
+            <div className="flex items-center text-[#888] text-[13px] lg:text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -110,7 +120,7 @@ export default function OriginStory({ id }: { id?: string }) {
               <p>Nigeria</p>
             </div>
 
-            <div className="flex items-center text-[#888] text-sm">
+            <div className="flex items-center text-[#888] text-[13px] lg:text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -133,7 +143,10 @@ export default function OriginStory({ id }: { id?: string }) {
             </div>
           </div>
 
-          <button className="font-mono text-[11px] flex items-center mb-px mt-7 bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-6 py-3 rounded-xl">
+          <button
+            onClick={handleClick}
+            className="font-mono text-[11px] flex items-center mb-px mt-7 bg-(--primary-color)/6 tracking-wider border border-(--primary-color)/40 px-6 py-3 rounded-xl hover:scale-104 transition-all duration-800 cursor-none"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -151,7 +164,9 @@ export default function OriginStory({ id }: { id?: string }) {
               <path d="M9 18c-4.51 2-5-2-7-2"></path>
             </svg>
 
-            <p>GitHub</p>
+            <p>
+              <ScrambleText text="GitHub" />
+            </p>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +187,7 @@ export default function OriginStory({ id }: { id?: string }) {
           </button>
         </div>
 
-        <div className="absolute left-1/2 top-0 bottom-0 transform flex flex-col items-center justify-center pointer-events-none w-[1%]">
+        <div className="max-lg:hidden absolute left-1/2 top-0 bottom-0 transform flex flex-col items-center justify-center pointer-events-none w-[1%]">
           <div className="absolute top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-(--primary-color)/70 bg-background flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +213,29 @@ export default function OriginStory({ id }: { id?: string }) {
           <div className="absolute bottom-1/7 w-4 h-4 border border-(--primary-color) rotate-45"></div>
         </div>
 
-        <div className="w-[42%]">
+        <div className="lg:hidden flex items-center justify-center my-16">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentcolor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-crosshair w-7 h-7"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="22" x2="18" y1="12" y2="12"></line>
+            <line x1="6" x2="2" y1="12" y2="12"></line>
+            <line x1="12" x2="12" y1="6" y2="2"></line>
+            <line x1="12" x2="12" y1="22" y2="18"></line>
+          </svg>
+        </div>
+
+        <div className="lg:w-[42%]">
           <div className="flex items-center font-[Exan]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -217,12 +254,12 @@ export default function OriginStory({ id }: { id?: string }) {
               <circle cx="12" cy="12" r="6"></circle>
               <circle cx="12" cy="12" r="2"></circle>
             </svg>
-            <p className="text-[27px] tracking-wide font-light">
+            <p className="text-[25px] lg:text-[27px] tracking-wide font-light">
               MISSION TIMELINE
             </p>
           </div>
 
-          <div className="flex gap-5 ml-1 mt-9 text-xs">
+          <div className="flex gap-3 lg:gap-5 ml-1 mt-9 text-xs">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -265,7 +302,7 @@ export default function OriginStory({ id }: { id?: string }) {
             </div>
           </div>
 
-          <div className="flex gap-5 ml-1 mt-8 text-xs">
+          <div className="flex gap-3 lg:gap-5 ml-1 mt-8 text-xs">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -311,7 +348,7 @@ export default function OriginStory({ id }: { id?: string }) {
             </div>
           </div>
 
-          <div className="flex gap-5 ml-1 mt-8 text-xs">
+          <div className="flex gap-3 lg:gap-5 ml-1 mt-8 text-xs">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -356,7 +393,7 @@ export default function OriginStory({ id }: { id?: string }) {
             </div>
           </div>
 
-          <div className="flex gap-5 ml-1 mt-8 text-xs">
+          <div className="flex gap-3 lg:gap-5 ml-1 mt-8 text-xs">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -394,7 +431,7 @@ export default function OriginStory({ id }: { id?: string }) {
               </div>
 
               <div className="flex gap-3">
-                <p>JavaScript</p>
+                <p className="max-lg:hidden">JavaScript</p>
                 <p>React.js</p>
                 <p>TailwindCSS</p>
                 <p>Next.js</p>
@@ -404,11 +441,16 @@ export default function OriginStory({ id }: { id?: string }) {
         </div>
       </div>
 
-      <div className="font-mono text-[11px] flex items-center mb-px mt-20 bg-(--primary-color)/2 tracking-wider border border-(--primary-color)/40 px-6 py-3 rounded-xl">
-        <p>STORY + TIMELINE: SYNCHRONIZED</p>
+      <div className="font-mono text-[11px] flex items-center mb-px mt-16 lg:mt-20 bg-(--primary-color)/2 tracking-wider border border-(--primary-color)/40 px-6 py-3 rounded-xl">
+        <p>
+          STORY + TIMELINE:{" "}
+          <span>
+            <ScrambleText text="SYNCHRONIZED" />
+          </span>
+        </p>
       </div>
 
-      <div className="w-[65%] mb-px mt-28 bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/40 px-6 py-4 rounded-xl">
+      <div className="w-[95%] lg:w-[65%] mb-px mt-24 lg:mt-28 bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/40 px-4 lg:px-6 py-4 rounded-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -427,16 +469,16 @@ export default function OriginStory({ id }: { id?: string }) {
           <circle cx="12" cy="12" r="2"></circle>
         </svg>
 
-        <div className="w-full flex flex-col items-center font-[Exan]">
-          <p className="text-[26px] font-extralight">TACTICAL PHILOSOPHY</p>
-          <div className="text-[#888] italic text-[18px] mt-3 flex flex-col items-center">
+        <div className="w-full flex flex-col items-center max-lg:text-center font-[Exan]">
+          <p className="text-[24px] lg:text-[26px] font-extralight">TACTICAL PHILOSOPHY</p>
+          <div className="text-[#888] italic text-[16px] lg:text-[18px] mt-3 flex flex-col items-center">
             <p>"To be exceptional, you have to be the exception.</p>
 
             <p>Break the default settings"</p>
           </div>
         </div>
 
-        <p className="font-[Exan] italic flex justify-center items-center w-full mt-5 tracking-wider text-[16px] font-light">
+        <p className="font-[Exan] italic flex justify-center items-center max-lg:text-center w-full mt-5 tracking-wider text-[14px] lg:text-[16px] font-light">
           — SHOLANKE OLADIMEJI [ CODENAME: SPARK ] —
         </p>
 

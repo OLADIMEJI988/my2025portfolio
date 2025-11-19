@@ -87,12 +87,12 @@ export default function SkillsArsenal({ id }: { id?: string }) {
         <p>ALL SKILLS</p>
       </div>
 
-      <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
+      <p className="text-3xl lg:text-6xl tracking-wide my-5 font-extralight font-[Exan]">
         SKILLS{" "}
         <span className="text-(--primary-color) font-normal">ARSENAL</span>
       </p>
 
-      <div className="text-[#888] w-[500px] font-mono text-[14px] text-center leading-[25px] tracking-wide">
+      <div className="text-[#888] lg:w-[500px] font-mono text-[12px] lg:text-[14px] text-center leading-[25px] tracking-wide px-3">
         <p>
           Powerful weaponry acquired through{" "}
           <span className="text-(--primary-color)">3+ years</span> of{" "}
@@ -103,7 +103,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
         </p>
       </div>
 
-      <div className="flex gap-16 tracking-wide font-mono">
+      <div className="flex gap-11 lg:gap-16 tracking-wide font-mono">
         <div className="space-y-1 text-center my-5">
           <p className="text-(--primary-color) text-xl">13+</p>
           <p className="text-[9px] text-[#888]">ACTIVE SKILLS</p>
@@ -120,8 +120,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="flex items-center gap-6 mt-10 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-2 py-2 rounded-xl font-mono">
+      <div className="flex max-lg:grid max-lg:w-[90%] items-center gap-6 mt-10 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 p-5 lg:px-2 lg:py-2 rounded-xl font-mono">
         {tabs.map((tab) => {
           const isActive = tab.id === activeTab;
           return (
@@ -161,8 +160,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
         })}
       </div>
 
-      {/* Active tab */}
-      <div className="mt-12 w-[93%]">
+      <div className="mt-12 w-[95%] lg:w-[93%]">
         <AnimatePresence mode="wait">
           {tabs
             .filter((tab) => tab.id === activeTab)
@@ -180,7 +178,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
         </AnimatePresence>
       </div>
 
-      <div className="mt-[76px] flex gap-6 w-[93%] font-mono">
+      <div className="mt-[76px] flex max-lg:grid gap-6 w-[90%] lg:w-[93%] font-mono">
         <div className="bg-[#0f0f0f]/30 flex flex-col items-center tracking-wider font-light border border-(--primary-color)/40 rounded-xl w-full p-12 hover:-translate-y-2 transition-transform duration-600 ease-in-out">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +195,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
           >
             <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
           </svg>
-          <p className="text-4xl text-(--primary-color) my-2">13+</p>
+          <p className="text-3xl lg:text-4xl text-(--primary-color) my-2">13+</p>
           <p className="text-[#959595] text-sm">Active Weapons</p>
           <p className="text-[#656565] text-xs">in arsenal</p>
         </div>
@@ -220,7 +218,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
             <circle cx="12" cy="12" r="6"></circle>
             <circle cx="12" cy="12" r="2"></circle>
           </svg>
-          <p className="text-4xl text-(--primary-color) my-2">81%+</p>
+          <p className="text-3xl lg:text-4xl text-(--primary-color) my-2">81%+</p>
           <p className="text-[#959595] text-sm">Avg Accuracy</p>
           <p className="text-[#656565] text-xs">success rate</p>
         </div>
@@ -248,7 +246,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
             <path d="M6 18a4 4 0 0 1-2-7.464"></path>
             <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"></path>
           </svg>
-          <p className="text-4xl text-(--primary-color) my-2">3+</p>
+          <p className="text-3xl lg:text-4xl text-(--primary-color) my-2">3+</p>
           <p className="text-[#959595] text-sm">Years Combat</p>
           <p className="text-[#656565] text-xs">experience</p>
         </div>
@@ -271,7 +269,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
             <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
             <path d="M2 12h20"></path>
           </svg>
-          <p className="text-4xl text-(--primary-color) my-2">24/7</p>
+          <p className="text-3xl lg:text-4xl text-(--primary-color) my-2">24/7</p>
           <p className="text-[#959595] text-sm">Operational</p>
           <p className="text-[#656565] text-xs">availability</p>
         </div>

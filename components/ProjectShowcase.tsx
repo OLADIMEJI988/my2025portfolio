@@ -43,10 +43,10 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         <svg
           stroke="var(--primary-color-dark)"
           fill="none"
-          stroke-width="2"
+          strokeWidth="2"
           viewBox="0 0 24 24"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           height="1em"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -127,10 +127,10 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         <svg
           stroke="var(--primary-color-dark)"
           fill="none"
-          stroke-width="2"
+          strokeWidth="2"
           viewBox="0 0 24 24"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           height="1em"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -263,12 +263,12 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         <p>MISSION PORTFOLIO</p>
       </div>
 
-      <p className="text-6xl tracking-wide my-5 font-extralight font-[Exan]">
+      <p className="text-3xl lg:text-6xl tracking-wide my-5 font-extralight font-[Exan]">
         PROJECT{" "}
         <span className="text-(--primary-color) font-normal">SHOWCASE</span>
       </p>
 
-      <div className="text-[#888] w-[500px] text-[14px] text-center leading-[25px] tracking-wide font-mono">
+      <div className="text-[#888] lg:w-[500px] text-[12px] lg:text-[14px] text-center leading-[25px] tracking-wide font-mono px-3">
         <span className="text-(--primary-color)">3+ years</span> of building{" "}
         <span className="text-(--primary-color)">
           precision-engineered solutions
@@ -297,13 +297,14 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         Flagship{" "}
         <span className="text-(--primary-color) font-normal">Operations</span>
       </p>
-      <p className="text-[11px] font-mono tracking-wider text-[#888]">
+      <p className=" text-[12px] lg:text-[11px] font-mono tracking-wider text-[#888] max-lg:mx-7 max-lg:text-center max-lg:mt-1">
         Current active missions with highest strategic value
       </p>
 
       <div
-        className="px-6 py-2 rounded-lg bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/50 my-10 pb-10 w-[93%] relative overflow-hidden 
+        className="px-6 py-2 rounded-lg bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/50 my-10 pb-10 w-[95%] lg:w-[93%] relative overflow-hidden 
           min-h-[490px] h-auto 
+          max-lg:h-[780px]
           lg:min-h-[500px] 
           xl:min-h-[510px] 
           [@media(min-width:1300px)]:min-h-[560px]
@@ -324,7 +325,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       <div className="mb-6 font-mono flex gap-4">
         <button
           onClick={prevSlide}
-          className="relative hover:scale-110 transition-all duration-300 hover:shadow-lg hover:shadow-(--primary-color)/20 hover:text-(--primary-color) flex items-center border border-[#1a1a1a] bg-[#0f0f0f]/30 pl-2 pr-[11px] py-2 rounded-lg gap-1 cursor-none"
+          className="relative hover:scale-110 transition-all duration-800 hover:shadow-lg hover:shadow-(--primary-color)/20 hover:text-(--primary-color) flex items-center border border-[#1a1a1a] bg-[#0f0f0f]/30 pl-2 pr-[11px] py-2 rounded-lg gap-1 cursor-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -336,7 +337,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="w-4 h-4 transition-transform duration-300"
+            className="w-4 h-4 transition-transform duration-800"
             aria-hidden="true"
           >
             <path d="m15 18-6-6 6-6"></path>
@@ -359,7 +360,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
 
         <button
           onClick={nextSlide}
-          className="hover:scale-110 transition-all duration-300 hover:shadow-lg hover:shadow-(--primary-color)/20 hover:text-(--primary-color) flex items-center border border-[#1a1a1a] bg-[#0f0f0f]/30 pl-3 pr-2 py-2 rounded-lg gap-1 cursor-none"
+          className="hover:scale-110 transition-all duration-800 hover:shadow-lg hover:shadow-(--primary-color)/20 hover:text-(--primary-color) flex items-center border border-[#1a1a1a] bg-[#0f0f0f]/30 pl-3 pr-2 py-2 rounded-lg gap-1 cursor-none"
         >
           <p className="text-sm">Next</p>
           <svg
@@ -372,7 +373,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="w-4 h-4 transition-transform duration-300"
+            className="w-4 h-4 transition-transform duration-800"
             aria-hidden="true"
           >
             <path d="m9 18 6-6-6-6"></path>
@@ -382,7 +383,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
 
       <button
         onClick={() => setIsPlaying(!isPlaying)}
-        className="hover:scale-105 transition-all duration-300 mb-10 flex items-center border border-(--primary-color)/30 bg-[#0f0f0f]/30 px-3 py-2 rounded-full gap-2 cursor-none"
+        className="hover:scale-105 transition-all duration-800 mb-10 flex items-center border border-(--primary-color)/30 bg-[#0f0f0f]/30 px-3 py-2 rounded-full gap-2 cursor-none"
       >
         {isPlaying ? (
           <svg
@@ -433,13 +434,13 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         <p>PRIORITY MISSIONS</p>
       </div>
 
-      <div className="grid grid-cols-2 w-[93%] gap-7">
+      <div className="grid lg:grid-cols-2 w-[95%] lg:w-[93%] gap-7">
         {priorityMissions.map((mission, index) => (
           <PriorityMissions key={index} {...mission} />
         ))}
       </div>
 
-      <div className="flex items-center font-mono gap-6 mt-16 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-5 py-4 rounded-xl">
+      <div className="flex items-center font-mono gap-4 lg:gap-6 mt-16 bg-[#0f0f0f]/30 tracking-wide border border-(--primary-color)/40 px-5 py-4 rounded-xl text-xs">
         <div className="flex flex-col items-center">
           <p className="text-(--primary-color)">23</p>
           <p className="text-[#888] text-[10px]">TOTAL MISSIONS</p>

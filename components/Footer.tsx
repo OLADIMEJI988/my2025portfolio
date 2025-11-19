@@ -1,18 +1,19 @@
 "use client";
 
+import ScrambleText from "./ScrambleText";
+
 export default function Footer() {
   return (
     <footer
       id="footer"
       className="relative py-16 border-t border-(--primary-color)/20 overflow-hidden"
     >
-      {/* Background Text */}
       <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
         <div className="text-center select-none">
-          <p className="text-[40vw] md:text-[15vw] lg:text-[12vw] xl:text-[10vw] font-bold tracking-wider text-arrow-green/2 font-mono leading-[0.8] whitespace-nowrap">
+          <p className="text-[19vw] md:text-[15vw] lg:text-[12vw] xl:text-[10vw] font-bold tracking-wide lg:tracking-wider font-mono leading-[0.8] whitespace-nowrap">
             SHOLANKE
           </p>
-          <p className="mt-2 text-[30vw] md:text-[15vw] lg:text-[12vw] xl:text-[10vw] font-bold tracking-wider text-arrow-green/2 font-mono leading-[0.8] whitespace-nowrap">
+          <p className="mt-2 text-[17vw] md:text-[15vw] lg:text-[12vw] xl:text-[10vw] font-bold tracking-wide lg:tracking-wider font-mono leading-[0.8] whitespace-nowrap">
             OLADIMEJI
           </p>
         </div>
@@ -21,9 +22,9 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 -translate-y-4">
           <div className="cursor-pointer flex items-center">
-            <div className="flex flex-col items-center">
-              <p className="font-light tracking-wide text-md font-[Exan]">
-                FRONTEND DEVELOPER
+            <div className="flex flex-col items-center cursor-none">
+              <p className="font-light tracking-wide text-md font-[Exan] min-w-[180px] cursor-none">
+                <ScrambleText text="FRONTEND DEVELOPER"/>
               </p>
               <p className="text-sm font-extralight font-mono text-(--primary-color)/80 mt-1">
                 ▸ SPARK.IGNITE
@@ -50,7 +51,7 @@ export default function Footer() {
                 href="mailto:sholanke49@gmail.com"
                 className="flex items-center gap-2 px-3 py-2 border border-(--primary-color)/30 
                  rounded-lg bg-(--primary-color)/5 hover:bg-(--primary-color)/10 
-                 transition-all duration-300"
+                 transition-all duration-300 cursor-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +78,7 @@ export default function Footer() {
                 href="tel:+2348136170619"
                 className="px-3 py-2 border border-(--primary-color)/30 rounded-lg 
                  bg-(--primary-color)/5 hover:bg-(--primary-color)/10 
-                 transition-all duration-300 font-mono font-light tracking-wider text-xs"
+                 transition-all duration-300 font-mono font-light tracking-wider text-xs cursor-none"
               >
                 +234 8136170619
               </a>
@@ -85,12 +86,11 @@ export default function Footer() {
           </div>
 
           <div className="flex justify-center space-x-6">
-            {/* Github */}
             <a
               href="https://github.com/OLADIMEJI988"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 border border-(--primary-color)/30 rounded-lg bg-(--primary-color)/5 hover:bg-(--primary-color)/10 transition-all duration-300 group"
+              className="p-3 border border-(--primary-color)/30 rounded-lg bg-(--primary-color)/5 hover:bg-(--primary-color)/10 transition-all duration-300 group cursor-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,12 +106,11 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/muhammad-hk"
+              href="https://www.linkedin.com/in/sholanke-oladimeji/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 border border-(--primary-color)/30 rounded-lg bg-(--primary-color)/5 hover:bg-(--primary-color)/10 transition-all duration-300 group"
+              className="p-3 border border-(--primary-color)/30 rounded-lg bg-(--primary-color)/5 hover:bg-(--primary-color)/10 transition-all duration-300 group cursor-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
