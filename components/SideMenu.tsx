@@ -126,7 +126,7 @@ export default function SideMenu() {
 
               <button
                 onClick={() => setActiveTab("colors")}
-                className={`flex-1 py-2 rounded-md relative z-10 transition-colors duration-300 ${
+                className={`flex-1 py-2 rounded-md relative z-10 transition-colors duration-300 cursor-none ${
                   activeTab === "colors"
                     ? "text-(--primary-color)/90"
                     : "text-[#888] hover:text-white"
@@ -137,7 +137,7 @@ export default function SideMenu() {
 
               <button
                 onClick={() => setActiveTab("theme")}
-                className={`flex-1 py-2 rounded-md relative z-10 transition-colors duration-300 ${
+                className={`flex-1 py-2 rounded-md relative z-10 transition-colors duration-300 cursor-none ${
                   activeTab === "theme"
                     ? "text-(--primary-color)/90"
                     : "text-[#888] hover:text-white"
@@ -154,7 +154,7 @@ export default function SideMenu() {
                     <li key={color.value}>
                       <button
                         onClick={() => setPrimaryColor(color.value)}
-                        className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition border hover:bg-[#181818] ${
+                        className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition border hover:bg-[#181818] cursor-none ${
                           activeColor === color.value ? "bg-[#131313]" : "border-transparent"
                         }`}
                         style={

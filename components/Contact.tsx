@@ -22,8 +22,8 @@ export default function Contact({ id }: { id?: string }) {
         <rect x="2" y="4" width="20" height="16" rx="2"></rect>
       </svg>
 
-      <p className="font-light text-3xl lg:text-6xl tracking-wide font-[Exan]">
-        Contact Me
+      <p className="text-3xl lg:text-6xl tracking-wide font-[Exan]">
+        Contact <span className="text-(--primary-color)">Me</span>
       </p>
       <p className="font-light text-[#888] mt-2 text-center text-[13px] lg:text-[15px] px-3">
         Ready to work together? Let's discuss your project and bring your ideas
@@ -34,7 +34,7 @@ export default function Contact({ id }: { id?: string }) {
         <p className="text-center text-xl font-sans font-light tracking-wide">
           Get In Touch
         </p>
-        <div className="flex max-lg:flex-col gap-5 lg:gap-8 mt-10">
+        <div className="flex max-lg:flex-col gap-6 lg:gap-8 mt-10">
           <div className="w-full tracking-wide">
             <p>Name</p>
             <input
@@ -54,7 +54,7 @@ export default function Contact({ id }: { id?: string }) {
           </div>
         </div>
 
-        <div className="w-full tracking-wide my-5">
+        <div className="w-full tracking-wide my-6">
           <p>Subject</p>
           <input
             type="text"
