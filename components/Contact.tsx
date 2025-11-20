@@ -34,7 +34,7 @@ export default function Contact({ id }: { id?: string }) {
         <p className="text-center text-xl font-sans font-light tracking-wide">
           Get In Touch
         </p>
-        <div className="flex gap-5 lg:gap-8 mt-10">
+        <div className="flex max-lg:flex-col gap-5 lg:gap-8 mt-10">
           <div className="w-full tracking-wide">
             <p>Name</p>
             <input

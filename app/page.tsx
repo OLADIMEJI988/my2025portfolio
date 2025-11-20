@@ -45,7 +45,7 @@ export default function Home() {
         ></div>
 
         {/* SVG background */}
-        <div className="absolute inset-0 flex justify-center items-center z-0 pointer-events-none max-lg:mt-5">
+        <div className="absolute inset-0 flex justify-center items-center z-0 pointer-events-none max-lg:mt-[60px]">
           <svg
             width="850"
             height="850"
@@ -144,9 +144,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex items-center lg:gap-5 gap-2.5 max-lg:tracking-wide mb-[25px] lg:mb-[35px] font-sans">
+          <div className="flex items-center lg:gap-5 gap-2.5 max-lg:tracking-wider mb-[25px] lg:mb-[35px] font-sans">
             <div className="w-16 h-0.5 bg-linear-to-r from-transparent to-(--primary-color)"></div>
-            <p className="font-extralight lg:text-5xl text-lg">
+            <p className="font-extralight lg:text-5xl text-3xl">
               SHOLANKE <span className="text-(--primary-color)">OLADIMEJI</span>
             </p>
             <div className="w-16 h-0.5 bg-linear-to-l from-transparent to-(--primary-color)"></div>
@@ -154,7 +154,7 @@ export default function Home() {
 
           <div className="flex items-center gap-3  mb-[25px] lg:mb-[35px] ">
             <div className="w-16 h-0.5 bg-linear-to-r from-transparent to-(--primary-color)"></div>
-            <div className="px-4 py-2 text-(--primary-color) rounded-full text-[11px] bg-transparent backdrop-blur-xs tracking-wider border border-(--primary-color)/50 font-mono">
+            <div className="px-4 py-2 text-(--primary-color) rounded-full text-[10px] lg:text-[11px] bg-transparent backdrop-blur-xs tracking-wider border border-(--primary-color)/50 font-mono">
               CODENAME:SPARK
             </div>
             <div className="w-16 h-0.5 bg-linear-to-l from-transparent to-(--primary-color)"></div>
@@ -245,7 +245,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex items-center gap-10 lg:gap-54 font-light font-mono">
+          <div className="flex items-center gap-14 lg:gap-54 font-light font-mono">
             <div className="space-y-1">
               <p className="text-(--primary-color) text-3xl lg:text-4xl">3+</p>
               <p className="text-[12px] text-[#888]">Years Active</p>

@@ -127,7 +127,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
             <div
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative flex flex-col items-center px-16 py-1.5 rounded-lg tracking-wider cursor-none ${
+              className={`relative flex flex-col items-center px-16 py-4 lg:py-1.5 rounded-lg tracking-wider cursor-none ${
                 isActive
                   ? "bg-(--primary-color)/20 border border-(--primary-color) text-(--primary-color)"
                   : "hover:bg-(--primary-color)/5 hover:border hover:border-(--primary-color)/30 text-[#656565]"
@@ -142,14 +142,14 @@ export default function SkillsArsenal({ id }: { id?: string }) {
                 stroke: isActive ? "var(--primary-color)" : "#656565",
               })}
               <p
-                className={`font-mono mt-3 text-[11px] ${
+                className={`font-mono mt-3 text-[12px] lg:text-[11px] ${
                   isActive ? "text-(--primary-color)" : "text-[#656565]"
                 }`}
               >
                 {tab.label}
               </p>
               <p
-                className={`text-sm ${
+                className={`text-[17px] lg:text-sm ${
                   isActive ? "text-(--primary-color)" : "text-[#959595]"
                 }`}
               >

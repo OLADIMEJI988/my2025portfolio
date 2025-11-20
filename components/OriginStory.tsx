@@ -236,7 +236,7 @@ export default function OriginStory({ id }: { id?: string }) {
         </div>
 
         <div className="lg:w-[42%]">
-          <div className="flex items-center font-[Exan]">
+          <div className="flex items-center font-[Exan] max-lg:w-full max-lg:justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

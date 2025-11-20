@@ -302,19 +302,15 @@ export default function ProjectShowcase({ id }: { id?: string }) {
       </p>
 
       <div
-        className="px-6 py-2 rounded-lg bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/50 my-10 pb-10 w-[95%] lg:w-[93%] relative overflow-hidden 
-          min-h-[490px] h-auto 
-          max-lg:h-[780px]
-          lg:min-h-[500px] 
-          xl:min-h-[510px] 
-          [@media(min-width:1300px)]:min-h-[560px]
-          [@media(min-width:1400px)]:min-h-[600px]"
+        className="max-lg:px-0 py-2 rounded-lg bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/50 my-10 max-lg:pb-7 pb-10 w-[95%] lg:w-[93%] relative overflow-hidden min-h-[400px]"
       >
         {projects.map((project, i) => (
           <div
             key={i}
-            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-              i === current ? "opacity-100 z-10" : "opacity-0 z-0"
+            className={`transition-opacity duration-500 ease-in-out ${
+              i === current
+                ? "relative opacity-100 z-10"
+                : "absolute top-0 left-0 w-full opacity-0 z-0 pointer-events-none"
             }`}
           >
             <Project {...project} />

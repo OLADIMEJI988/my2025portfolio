@@ -125,11 +125,11 @@ export default function Project({
             <Image
               className="w-full object-cover rounded-lg"
               src={img}
-              alt="close"
+              alt=""
               width={800}
               height={600}
-              quality={100}
-              style={{ imageRendering: "auto" }}
+              // quality={100}
+              // style={{ imageRendering: "auto" }}
               priority
             />
           </div>
