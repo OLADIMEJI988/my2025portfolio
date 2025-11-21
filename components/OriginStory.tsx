@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedText from "./AnimatedText";
 import ScrambleText from "./ScrambleText";
 
 export default function OriginStory({ id }: { id?: string }) {
@@ -18,9 +19,7 @@ export default function OriginStory({ id }: { id?: string }) {
         <p>THE STORY</p>
       </div>
 
-      <p className="text-3xl lg:text-6xl tracking-wide my-5 font-extralight font-[Exan]">
-        ORIGIN <span className="text-(--primary-color) font-normal">STORY</span>
-      </p>
+      <AnimatedText text="ORIGIN STORY" highlight="STORY" />
 
       <div className="text-[#888] lg:w-[580px] text-[12px] lg:text-[14px] text-center leading-[25px] tracking-wide font-mono">
         <p>

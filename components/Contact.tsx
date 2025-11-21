@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedText from "./AnimatedText";
 import ScrambleText from "./ScrambleText";
 
 export default function Contact({ id }: { id?: string }) {
@@ -22,9 +23,8 @@ export default function Contact({ id }: { id?: string }) {
         <rect x="2" y="4" width="20" height="16" rx="2"></rect>
       </svg>
 
-      <p className="text-3xl lg:text-6xl tracking-wide font-[Exan]">
-        Contact <span className="text-(--primary-color)">Me</span>
-      </p>
+      <AnimatedText text="Contact Me" highlight="Me" />
+      
       <p className="font-light text-[#888] mt-2 text-center text-[13px] lg:text-[15px] px-3">
         Ready to work together? Let's discuss your project and bring your ideas
         to life.

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import PriorityMissions from "./PriorityMissions";
 import Project from "./Project";
+import AnimatedText from "./AnimatedText";
 
 export default function ProjectShowcase({ id }: { id?: string }) {
   const projects = [
@@ -263,10 +264,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         <p>MISSION PORTFOLIO</p>
       </div>
 
-      <p className="text-3xl lg:text-6xl tracking-wide my-5 font-extralight font-[Exan]">
-        PROJECT{" "}
-        <span className="text-(--primary-color) font-normal">SHOWCASE</span>
-      </p>
+      <AnimatedText text="PROJECT SHOWCASE" highlight="SHOWCASE" />
 
       <div className="text-[#888] lg:w-[500px] text-[12px] lg:text-[14px] text-center leading-[25px] tracking-wide font-mono px-3">
         <span className="text-(--primary-color)">3+ years</span> of building{" "}
@@ -301,9 +299,7 @@ export default function ProjectShowcase({ id }: { id?: string }) {
         Current active missions with highest strategic value
       </p>
 
-      <div
-        className="max-lg:px-0 py-2 rounded-lg bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/50 my-10 max-lg:pb-7 pb-10 w-[95%] lg:w-[93%] relative overflow-hidden min-h-[400px]"
-      >
+      <div className="max-lg:px-0 py-2 rounded-lg bg-(--primary-color)/2 tracking-wide border border-(--primary-color)/50 my-10 max-lg:pb-7 pb-10 w-[95%] lg:w-[93%] relative overflow-hidden min-h-[400px]">
         {projects.map((project, i) => (
           <div
             key={i}

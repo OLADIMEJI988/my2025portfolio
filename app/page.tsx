@@ -10,6 +10,7 @@ import OriginStory from "@/components/OriginStory";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import ScrambleText from "@/components/ScrambleText";
+import CombustingStars from "@/components/CombustingStars";
 
 export default function Home() {
   const rotatingGroupRef = useRef<SVGGElement | null>(null);
@@ -35,6 +36,9 @@ export default function Home() {
         id="home"
         className="relative bg-lines overflow-hidden font-sans h-[830px] lg:h-[1060px] mb-40"
       >
+
+        <CombustingStars />
+
         <MouseTracker />
         <CursorGlow />
         <Header />

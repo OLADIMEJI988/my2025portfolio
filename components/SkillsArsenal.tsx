@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import CoreArsenal from "./CoreArsenal";
 import UiWeapons from "./UiWeapons";
 import CloudOps from "./CloudOps";
+import AnimatedText from "./AnimatedText";
 
 export default function SkillsArsenal({ id }: { id?: string }) {
   const [activeTab, setActiveTab] = useState("core");
@@ -87,10 +88,7 @@ export default function SkillsArsenal({ id }: { id?: string }) {
         <p>ALL SKILLS</p>
       </div>
 
-      <p className="text-3xl lg:text-6xl tracking-wide my-5 font-extralight font-[Exan]">
-        SKILLS{" "}
-        <span className="text-(--primary-color) font-normal">ARSENAL</span>
-      </p>
+      <AnimatedText text="SKILLS ARSENAL" highlight="ARSENAL" />
 
       <div className="text-[#888] lg:w-[500px] font-mono text-[12px] lg:text-[14px] text-center leading-[25px] tracking-wide px-3">
         <p>
